@@ -1,4 +1,6 @@
 import Foundation
+
+#if canImport(os)
 import os.log
 
 @available(macOS 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
@@ -30,3 +32,4 @@ public extension OSLog {
         self.init(subsystem: id, category: category)
     }
 }
+#endif

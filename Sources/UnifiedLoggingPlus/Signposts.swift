@@ -1,3 +1,4 @@
+#if canImport(os)
 import os.log
 
 @available(macOS 10.14, iOS 12.0, watchOS 5.0, tvOS 12.0, *)
@@ -41,3 +42,4 @@ public extension OSLog {
         return Signpost(name: name, log: self, id: id)
     }
 }
+#endif
