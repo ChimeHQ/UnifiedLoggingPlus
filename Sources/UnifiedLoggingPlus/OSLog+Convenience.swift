@@ -24,7 +24,7 @@ public extension OSLog {
 
 @available(macOS 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
 public extension OSLog {
-    convenience init?(bundleIdScopedCategeory category: String) {
+    convenience init?(bundleIdScopedCategory category: String) {
         guard let id = Bundle.main.bundleIdentifier else {
             return nil
         }

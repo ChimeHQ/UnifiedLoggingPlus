@@ -2,7 +2,7 @@
 
 # UnifiedLoggingPlus
 
-Micro-framework for making OSLog more pleasant.
+Lightweight utilities for making OSLog more pleasant.
 
 ## Integration
 
@@ -13,6 +13,23 @@ dependencies: [
     .package(url: "https://github.com/ChimeHQ/UnifiedLoggingPlus")
 ]
 ```
+
+## Usage
+
+Includes a simple `Signpost` type that encapsulates `os_signpost` calls, and a bunch of simple extension on `OSLog`.
+
+```swift
+let log = OSLog(bundleIdScopedCategory: "MyCategory")!
+
+log.debug("concise log statements")
+
+let result = log.signpostWithin("name") {
+    // this gets measured by the signpost
+}
+
+```
+
+
 
 ### Suggestions or Feedback
 
