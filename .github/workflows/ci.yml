@@ -23,4 +23,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Test platform ${{ matrix.destination }}
-        run: set -o pipefail && xcodebuild -scheme UnifiedLoggingPlus -destination "${{ matrix.destination }}" build | xcpretty
+        run: set -o pipefail && xcodebuild -scheme UnifiedLoggingPlus -destination "${{ matrix.destination }}" test | xcpretty

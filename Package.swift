@@ -10,5 +10,6 @@ let package = Package(
     dependencies: [],
     targets: [
         .target(name: "UnifiedLoggingPlus", dependencies: []),
+        .testTarget(name: "UnifiedLoggingPlusTests", dependencies: ["UnifiedLoggingPlus"]),
     ]
 )
