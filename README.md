@@ -3,7 +3,7 @@
 
 # UnifiedLoggingPlus
 
-Lightweight utilities for making OSLog more pleasant.
+Lightweight utilities for making OSLog more pleasant. Honestly, this is not a lot of code. But, it's handy and I've come to apperciate it.
 
 ## Integration
 
@@ -17,7 +17,16 @@ dependencies: [
 
 ## Usage
 
-Includes a simple `Signpost` type that encapsulates `os_signpost` calls, and a bunch of simple extension on `OSLog`.
+More consise logging statements.
+
+```swift
+let log = OSLog(bundleIdScopedCategory: "MyCategory")!
+
+log.debug("A")
+log.info("B: %{public}@", value)
+```
+
+`Signpost` is a simple type that encapsulates `os_signpost` calls, and a bunch of simple extension on `OSLog`.
 
 ```swift
 let log = OSLog(bundleIdScopedCategory: "MyCategory")!
@@ -27,10 +36,7 @@ log.debug("concise log statements")
 let result = log.signpostWithin("name") {
     // this gets measured by the signpost
 }
-
 ```
-
-
 
 ### Suggestions or Feedback
 

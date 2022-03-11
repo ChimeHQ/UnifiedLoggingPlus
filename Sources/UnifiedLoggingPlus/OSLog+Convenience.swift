@@ -5,19 +5,19 @@ import os.log
 
 @available(macOS 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
 public extension OSLog {
-    func debug(_ message: StaticString, args: CVarArg...) {
+    func debug(_ message: StaticString, _ args: CVarArg...) {
         os_log(message, log: self, type: .debug, args)
     }
 
-    func info(_ message: StaticString, args: CVarArg...) {
+    func info(_ message: StaticString, _ args: CVarArg...) {
         os_log(message, log: self, type: .info, args)
     }
 
-    func error(_ message: StaticString, args: CVarArg...) {
+    func error(_ message: StaticString, _ args: CVarArg...) {
         os_log(message, log: self, type: .error, args)
     }
 
-    func fault(_ message: StaticString, args: CVarArg...) {
+    func fault(_ message: StaticString, _ args: CVarArg...) {
         os_log(message, log: self, type: .fault, args)
     }
 }
