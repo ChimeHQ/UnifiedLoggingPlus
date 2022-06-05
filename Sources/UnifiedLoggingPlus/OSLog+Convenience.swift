@@ -79,5 +79,11 @@ public extension OSLog {
 
         self.init(subsystem: id, category: category)
     }
+
+    convenience init(category: String, bundleIdFallback: String = "") {
+        let subsystem = Bundle.main.bundleIdentifier ?? bundleIdFallback
+        
+        self.init(subsystem: subsystem, category: category)
+    }
 }
 #endif
