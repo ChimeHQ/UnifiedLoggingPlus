@@ -45,9 +45,17 @@ public extension OSLog {
         os_log(message, log: self, type: .error, arg1)
     }
 
+	func error(_ message: StaticString, _ error: Error) {
+		os_log(message, log: self, type: .error, String(describing: error))
+	}
+
     func error(_ message: StaticString, _ arg1: CVarArg, _ arg2: CVarArg) {
         os_log(message, log: self, type: .error, arg1, arg2)
     }
+
+	func error(_ message: StaticString, _ arg1: CVarArg, _ error: Error) {
+		os_log(message, log: self, type: .error, arg1, String(describing: error))
+	}
 
     func error(_ message: StaticString, _ arg1: CVarArg, _ arg2: CVarArg, _ arg3: CVarArg) {
         os_log(message, log: self, type: .error, arg1, arg2, arg3)

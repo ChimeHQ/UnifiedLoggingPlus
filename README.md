@@ -22,9 +22,17 @@ More consise logging statements.
 
 ```swift
 let log = OSLog(bundleIdScopedCategory: "MyCategory")!
+let otherLog = OSLog(category: "MyCategory") // defaults to using bundle-id for scoping
 
 log.debug("A")
 log.info("B: %{public}@", value)
+
+do {
+    try thingThatThrows()
+} catch {
+    log.error("print error type without conversion: %{public}@", error)
+}
+
 ```
 
 `Signpost` is a simple type that encapsulates `os_signpost` calls, and a bunch of simple extension on `OSLog`.
