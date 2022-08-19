@@ -18,6 +18,12 @@ dependencies: [
 
 ## Usage
 
+Simple helper for `Logger`.
+
+```swift
+let logger = Logger(category: "MyCategory") // uses OSLog(category:)
+```
+
 More consise logging statements.
 
 ```swift
